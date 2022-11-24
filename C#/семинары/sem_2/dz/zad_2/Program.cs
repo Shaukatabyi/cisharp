@@ -1,5 +1,5 @@
 ﻿Console.Clear();
-Console.WriteLine("Введите любое число ");
+Console.WriteLine("Введите положительное число ");
 
 string s = Console.ReadLine();
 int num = Convert.ToInt32(s);
