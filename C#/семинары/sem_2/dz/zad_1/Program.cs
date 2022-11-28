@@ -1,26 +1,23 @@
-﻿// 4. метод, формирующий новый массив на основе имеющегося
-//! ДЗ ОПИСАТЬ БЛОК-СХЕМУ РЕШЕНИЯ ЗАДАЧИ
-int[] Solution(int[] collectionElements, int evenCounts)
+﻿Console.Clear();
+Console.WriteLine("Введите трёхзначное число ");
+
+string s = Console.ReadLine();
+int num = Convert.ToInt32(s);
+
+if (num > 999)
 {
+    Console.WriteLine("error");
+}
 
-  //       v
-  // 1 2 3 4 5 6 7 8 9 0 collectionElements
-  // 2 0 0 0 0 items
-  //   ^ 
-
-  int[] items = new int[evenCounts];
-  int length = collectionElements.Length;
-  int position = 0;
-  int indexInItems = 0;
-  while (position < length)
-  {
-    if (collectionElements[position] % 2 == 0)
+else
+{
+    if (num < 100)
     {
-      items[indexInItems] = collectionElements[position];
-      indexInItems++;
+    Console.WriteLine("error");
     }
-    position++;
-  }
-
-  return items;
+    else 
+    {int des = num / 10 % 10;
+    Console.Write("вторая цифра ->  ");
+    Console.Write(des);
+    }
 }
