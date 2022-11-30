@@ -24,3 +24,4 @@ string PrintGood(int[] array)
     return result + "]";
 }
 Console.WriteLine(PrintGood(array));
+
