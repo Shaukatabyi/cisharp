@@ -110,8 +110,8 @@ string PrintGood(int[] numbers)
 
 int countElements = GetNumber("Введите количество эл массива: ");
 int[] arr = CreateArray(countElements);
-Fill(arr);
+//Fill(arr);
 PrintBad(arr);
-int even = CountIsEven(arr);
-int[] newArr = Solution(arr, even);
+//int even = CountIsEven(arr);
+//int[] newArr = Solution(arr, even);
 Console.WriteLine(PrintGood(newArr));
