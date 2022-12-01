@@ -36,6 +36,7 @@ string PrintGood(int[] numbers)
   }
   return result + "]";
 }
+
 // сумма положительных элементов
 
 int SumPositive(int[] numbers)
@@ -48,6 +49,7 @@ int SumPositive(int[] numbers)
   }
   return result;
 }
+
 // сумма отрицательных элементов
 
 int SumNegative(int[] numbers)
