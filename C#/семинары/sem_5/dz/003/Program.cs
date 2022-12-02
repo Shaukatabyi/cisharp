@@ -19,21 +19,23 @@ void ZapolnMas (double[] massiv, int min, int max)
     }
 }
 
-double Max_Min(double[] mass2)
+double MaxMin(double[] mass2)
 {
-     double raz = Math.Max(mass2) - Math.Min (mass2);
-//     //double min = 0;
-//     int lens = mass2.Length;
-//     for (int i = 0; i < lens; i++)
-//     {
-//         if(mass2[i]>mass2[i+1]) max= mass2[i];
-        
-//     }
-
+    double max = 0;
+    double min = 0;
+    
+    int lens = mass2.Length;
+    for (int i = 0; i < lens-1; i++)
+    {
+        if(mass2[i]<mass2[i+1]) min= mass2[i];
+        if(mass2[i]>max) max= mass2[i];
+       
+    }
+    double raz = max-min;
     return raz;
 }
 
-
+ 
 
 string PechatMas(double[] nomer)
 {
@@ -53,6 +55,6 @@ double[] itog = SozdaetMas(new Random().Next(5, 15));
 
 ZapolnMas(itog, 1, 10);
 Console.WriteLine(PechatMas(itog));
-
-double rr = Max_Min(itog);
+Console.Write("Разница между max и min =");
+double rr = MaxMin(itog);
 Console.WriteLine(rr);
