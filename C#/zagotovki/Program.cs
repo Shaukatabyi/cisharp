@@ -73,6 +73,21 @@ Console.WriteLine($">0 {pos}");
 int neg = SumNegative(col);
 Console.WriteLine($"<0 {neg}");
 
+
+// сумма элементов на нечетных индексах
+int Sum_nech_ind(int[] mass2)
+{
+    int result = 0;
+    int lens = mass2.Length;
+    for (int i = 0; i < lens; i++)
+    {
+        if(i%2!=0) result = result + mass2[i];
+        
+    }
+
+    return result;
+}
+
 // Задача 2: Напишите программу замена элементов массива: положительные элементы замените на соответствующие отрицательные, и наоборот.
 
 
