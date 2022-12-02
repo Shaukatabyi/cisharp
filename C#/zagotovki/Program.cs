@@ -73,6 +73,22 @@ Console.WriteLine($">0 {pos}");
 int neg = SumNegative(col);
 Console.WriteLine($"<0 {neg}");
 
+// разница между min и max
+double MaxMin(double[] mass2)
+{
+    double max = mass2[0];
+    double min = mass2[0];
+    
+    int lens = mass2.Length;
+    for (int i = 1; i < lens-1; i++)
+    {
+        
+        if(mass2[i]>max) max= mass2[i];
+        if(mass2[i]<min) min= mass2[i];
+    }
+    double raz = max-min;
+    return raz;
+}
 
 // сумма элементов на нечетных индексах
 int Sum_nech_ind(int[] mass2)
