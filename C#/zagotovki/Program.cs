@@ -104,6 +104,62 @@ int Sum_nech_ind(int[] mass2)
     return result;
 }
 
+// нахождение факториала
+double Factorial(int n)
+{
+    if(n==1) return 1;
+    else return n*Factorial(n-1);
+}
+Console.WriteLine(Factorial(3));
+for (int i = 1; i < 50 ; i++)
+{
+    Console.WriteLine($"{i}!= {Factorial(i)}");
+}
+
+// фибоначчи
+double Fibonacci(int n)
+{
+    if (n==1 || n==2) return 1;
+    else return Fibonacci(n-1) + Fibonacci(n-2);
+}
+
+for (int i = 1; i<50; i++)
+{
+ Console.WriteLine($"f {i}: {Fibonacci(i)}");
+}
+
+// создает пустой двухмерный массив
+void PrintArray(int[,] matr)
+{
+    for (int i = 0; i < matr.GetLength(0); i++)
+    {
+         for (int j = 0; j < matr.GetLength(1); j++)
+        {
+             Console.Write($"{matr[i, j]} ");
+        }
+    Console.WriteLine();   
+    }
+}   
+
+// заполняет 2мерный массив случайными числами
+void FillArray(int[,] matr)
+{
+for (int i = 0; i < matr.GetLength(0); i++)
+    {
+        for (int j = 0; j < matr.GetLength(1); j++)
+        {
+            matr[i,j] = new Random().Next(1, 10); //[1, 10)
+        } 
+    
+    }
+}
+// клиентскии код создания и заполнения двумерных массивов
+int[,] matrix = new int[3, 4];
+PrintArray(matrix);
+Console.WriteLine();
+FillArray(matrix);
+PrintArray(matrix);
+
 // Задача 2: Напишите программу замена элементов массива: положительные элементы замените на соответствующие отрицательные, и наоборот.
 
 
