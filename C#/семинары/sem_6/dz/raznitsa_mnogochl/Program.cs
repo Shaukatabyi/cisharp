@@ -12,10 +12,10 @@ int[] Razn(int[] f, int[] g)
   int powF = f.Length;
   int powG = g.Length;
 
-  int resultMax = powF;
-  int resultMin = powG;
+  int resultMax = powF; 
+  int resultMin= powG;
 
-  if (powG > resultMax)
+   if (powG > resultMax)
   {
     resultMax = powG;
     resultMin = powF;
@@ -30,7 +30,7 @@ int[] Razn(int[] f, int[] g)
 
   for (int i = resultMin; i < resultMax; i++)
   {
-    if (resultMax == powG) result[i] = g[i];
+    if (resultMax == powG) result[i] = (g[i])*-1;
     else result[i] = f[i];
   }
 
@@ -47,9 +47,11 @@ string Print(int[] f)
     int t = f[i];
     if (f[i] == 0) continue;
     if (f[i] < 0) { output += " - "; }
-    else if (i != 0 && (i-1)!=0) { output += " + "; }
+    else if (i != 0 ) { output += " + "; }
+
 
     if (t < 0) t = -t;
+   
     if (i == 1) { output += $"{t}x"; }
     if (i == 0) { output += $"{t}"; }
     if (i != 1 && i != 0 && f[i] != 0) { output += $"{t}x{pows[i]}"; }
@@ -62,11 +64,11 @@ string Print(int[] f)
 
 //          0  1  2  3  4  5  6  7  ......... N
 
-int[] f = { 2, 3, 8, 6, -9, 7, 3 };
+int[] f = { 4, 0, 3, 8, 6, -9, 7, 3 };
 //          1* x^0 + 2*x^1 + 0*x^2 + 4*x^3 + 5*x^4 + 6*x^5
 // 
 
-int[] g = { 1, 1, -2, -5, -9, 3, 7, -7 };
+int[] g = { 1, -2, -5, -9, 3, 7, -7 };
 Console.WriteLine(Print(f));
 Console.WriteLine(Print(g));
 int[] s = Razn(f, g);
