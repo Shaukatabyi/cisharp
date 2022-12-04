@@ -160,6 +160,10 @@ Console.WriteLine();
 FillArray(matrix);
 PrintArray(matrix);
 
+// красивый вывод одлномерного массива
+int[] koeff = GetKoeff(tr, 6);
+System.Console.WriteLine(String.Join(' ', koeff));
+
 // Задача 2: Напишите программу замена элементов массива: положительные элементы замените на соответствующие отрицательные, и наоборот.
 
 

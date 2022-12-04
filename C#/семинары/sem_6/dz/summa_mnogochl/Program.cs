@@ -39,7 +39,10 @@ int[] Sum(int[] f, int[] g)
 
 string Print(int[] f)
 {
-  string[] pows = { "^0", "^1", "^2", "^3", "^4", "^5", "^6", "^7", "^8", "^9" };
+  Console.OutputEncoding = System.Text.Encoding.UTF8;
+  Console.InputEncoding = System.Text.Encoding.UTF8;
+  string[] pows = { "⁰", "¹", "²", "³", "⁴", "⁵", "⁶", "⁷", "⁸", "⁹" };
+  
   string output = String.Empty;
   for (int i = 0; i < f.Length; i++)
   {
