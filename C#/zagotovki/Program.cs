@@ -164,6 +164,65 @@ PrintArray(matrix);
 int[] koeff = GetKoeff(tr, 6);
 System.Console.WriteLine(String.Join(' ', koeff));
 
+//сортировка одномерного массива min max вар 1
+void SelectionSort(int[] array)
+{
+    for (int i = 0; i < array.Length-1 ; i++)
+    {
+       int minPosition = i;
+
+       for (int j = i+1; j < array.Length; j++)
+       {
+           if (array[j] < array [minPosition]) minPosition = j;
+       }
+       
+        int temporary = array[i];
+        array[i] = array [minPosition];
+        array [minPosition] = temporary;
+    }
+
+}
+// сортировка одномерного массива min max вар 2
+void SelectionSort(int[] matr)
+{
+    for (int i = 0; i < matr.Length-1 ; i++)
+    {
+       for (int j = i+1; j < matr.Length; j++)
+       {
+           if (matr[j] < matr [i])
+           {    
+                int temporary = matr[i];
+                matr[i] = matr [j];
+                matr [j] = temporary;
+            }
+        }
+    }
+
+}
+
+// Функция сортировки элементов в строке двумерного массива, по убыванию
+void SortToLower(int[,] array)
+{
+    for (int i = 0; i < array.GetLength(0); i++)
+    {
+        for (int j = 0; j < array.GetLength(1); j++)
+        {
+            for (int k = 0; k < array.GetLength(1) - 1; k++)
+            {
+                if (array[i, k] < array[i, k + 1])
+                {
+                    int temp = array[i, k + 1];
+                    array[i, k + 1] = array[i, k];
+                    array[i, k] = temp;
+                }
+            }
+        }
+    }
+}
+
+
+
+
 // Задача 2: Напишите программу замена элементов массива: положительные элементы замените на соответствующие отрицательные, и наоборот.
 
 
