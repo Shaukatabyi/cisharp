@@ -220,6 +220,35 @@ void SortToLower(int[,] array)
     }
 }
 
+//выдаёт номер строки с наименьшей суммой элементов в двухмерном массиве
+void MinStroka(int[,]matr)
+{
+    int summinstr = 0;
+    for (int i = 0; i <  matr.GetLength(1); i++)
+    {
+        summinstr = summinstr + matr[0,i];
+    }
+
+
+    int sumstr =0; 
+    int strminsum = 0;
+    for (int i = 0; i < matr.GetLength(0); i++)
+    {
+        
+        for (int j = 0; j < matr.GetLength(1); j++) sumstr = sumstr + matr[i,j];
+        
+        if(sumstr < summinstr)
+        {
+            summinstr = sumstr;
+            strminsum = i;
+        }
+        sumstr = 0;   
+        
+    }
+    Console.WriteLine($"строка {strminsum+1} - с минимальной суммой элементов");
+}
+
+
 
 
 
