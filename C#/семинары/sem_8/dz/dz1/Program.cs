@@ -40,7 +40,7 @@ for (int i = 0; i < matr.GetLength(0); i++)
         {
             for (int k = 0; k < matr.GetLength(1)-1; k++)
             {
-                if (matr[i, k] > matr [i, k+1])
+                if (matr[i, k] < matr [i, k+1])
                 { 
                     int temporary = matr[i, k+1];
                     matr[i, k+1] = matr [i, k];
