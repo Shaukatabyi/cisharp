@@ -286,8 +286,56 @@ System.Console.WriteLine(array3D);
 Print3D(array3D);
 System.Console.WriteLine(array3D);
 
+ 
+//сумма натуральных элементов в промежутке от M до N.
 
+ //с рекурсией
+int SumNat1(int m, int n)
+{  
+    if(m<0 || n<0) return 0;
+    else
+    { 
+        if(m<=n)
+        {
+            if(n==m) return m;
+            else return  m+SumNat1(m+1, n);
+        }
+        else return m+SumNat1(m-1, n);
+    }
+    
+}  
 
+int num3 = -4;
+int num4 =8;
+System.Console.WriteLine(SumNat(num3, num4)); 
+
+//без рекурсии
+int SumNat(int m, int n)
+{
+    if (m<0 || n<0) return 0;
+
+    else
+    { 
+        if(m<=n)
+        {
+            int result = 0;
+            for (int i = m; i <= n; i++) 
+                {
+                    result += i;
+                }
+            return result; 
+        }
+        else 
+        {
+            int result = n;
+            for (int i = m; i > n; i--) 
+                {
+                    result += i;
+                }
+            return result;
+        }
+    }
+}
 
 
 
